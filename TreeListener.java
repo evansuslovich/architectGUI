@@ -32,17 +32,21 @@ public class TreeListener extends JFrame{
         totalPanel.add(introPanel, BorderLayout.NORTH); 
         totalPanel.setBackground(new Color(123,123,123)); 
 
-        TreePanel panel = new TreePanel(); 
-        panel.setBackground(new Color(123,123,123)); 
+        TreePanel treePanel = new TreePanel(); 
+        treePanel.setBackground(new Color(123,123,123)); 
 
-        getContentPane().add(panel).addMouseListener(new TreeClickListener(panel)); 
+        getContentPane().add(treePanel).addMouseListener(new TreeClickListener(treePanel)); 
 
-        totalPanel.add(panel, BorderLayout.CENTER); 
+        totalPanel.add(treePanel, BorderLayout.CENTER); // add treePanel to the center of the frame 
+
+        menu menuPanel = new menu(); 
+        menuPanel.setBorder(new LineBorder(Color.BLACK,5)); 
+        totalPanel.add(menuPanel, BorderLayout.WEST);  // add menuPanel to the west side of the frame
+
         add(totalPanel); 
 
         //setContentPane(panel); 
         //panel.addMouseListener(new TreeClickListener(panel));
-
     
 
         setVisible(true); 
