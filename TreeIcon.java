@@ -23,7 +23,7 @@ public class TreeIcon {
 
     public void draw(Graphics g){
 
-        ImageIcon i = new ImageIcon("treeOFFICIAL.png");
+        ImageIcon i = new ImageIcon("treeImage.png");
         image = i.getImage(); 
         
         g.drawImage(image, x, y, null);
