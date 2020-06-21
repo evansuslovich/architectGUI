@@ -10,7 +10,6 @@ public class TreeClickListener extends MouseAdapter{
 
     }
 
-    
     @Override
     public void mouseClicked(MouseEvent e){
         panel.addTree(new TreeIcon(e.getX() - 6 , e.getY() - 6)); 
