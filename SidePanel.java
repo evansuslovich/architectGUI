@@ -12,24 +12,21 @@ public class SidePanel extends JPanel{
     //private TreeClickListener click; 
     //private MouseEvent e; 
 
-    
+    //private TreePanel panel; 
 
     JButton treeButton = new JButton("Tree");
     JButton bushButton = new JButton("Bush");
 
-    private ImageIcon treeImage; 
-    private JLabel treeLabel; 
+    private  ImageIcon treeImage; 
+    private  JLabel treeLabel; 
     JPanel treePanel = new JPanel();
 
 
-    private ImageIcon bushImage; 
-    private JLabel bushLabel; 
+    private  ImageIcon bushImage; 
+    private  JLabel bushLabel; 
     JPanel bushPanel = new JPanel(); 
 
-    String select; 
-
-    
-    
+    static String select; 
 
     public SidePanel(){
         setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS)); 
@@ -63,23 +60,17 @@ public class SidePanel extends JPanel{
     public void actionListener(){
         treeButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                select = "tree"; 
-                
+                TreePanel.setSelect("Tree");
+
             }
         }); 
 
         bushButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                select = "bush"; 
+                TreePanel.setSelect("Bush"); 
+
             }
         });
-    }
-
-    public String getSelect(){
-        return select; 
-    }
-
-
-    
+    }    
 
 }
