@@ -39,7 +39,7 @@ public class TreeListener extends JFrame{
 
         totalPanel.add(treePanel, BorderLayout.CENTER); // add treePanel to the center of the frame 
 
-        menu menuPanel = new menu(); 
+        SidePanel menuPanel = new SidePanel(); 
         menuPanel.setBorder(new LineBorder(Color.BLACK,5)); 
         totalPanel.add(menuPanel, BorderLayout.WEST);  // add menuPanel to the west side of the frame
 
