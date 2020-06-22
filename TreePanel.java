@@ -10,13 +10,26 @@ public class TreePanel extends JPanel{
     private List<TreeIcon> trees = new LinkedList<TreeIcon>(); 
     private List<TreeIcon> bushes = new LinkedList<TreeIcon>(); 
 
+    private static String select; 
+    
+
+    public static void setSelect(String select1){
+        select = select1; 
+    }
+
     public void addTree(TreeIcon tree){
-        trees.add(tree); 
-        this.repaint(); 
+        
+        if(select.equals("Tree")){
+            trees.add(tree); 
+            this.repaint(); 
+        }
+        
     }
     public void addBush(TreeIcon bush){
-        bushes.add(bush);
-        this.repaint();
+        if(select.equals("Bush")){
+            bushes.add(bush);
+            this.repaint();
+        }
     }
     @Override
     public void paint(Graphics g){
@@ -28,6 +41,4 @@ public class TreePanel extends JPanel{
         }
     }
     
-    
-
 }
