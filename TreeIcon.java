@@ -5,6 +5,7 @@ import javax.swing.ImageIcon;
 public class TreeIcon {
     Image treeImage; 
     Image bushImage;
+    Image churchImage;
 
     private int x; 
     private int y;     
@@ -23,17 +24,21 @@ public class TreeIcon {
 
 
     public void drawTree(Graphics g){
-        ImageIcon tree = new ImageIcon("treeImage.png");
+        ImageIcon tree = new ImageIcon("treeImageFull.png");
         treeImage = tree.getImage(); 
 
         g.drawImage(treeImage, x, y, null);
-
     }
     public void drawBush(Graphics g){
 
         ImageIcon bush = new ImageIcon("bushImage.png"); 
         bushImage = bush.getImage(); 
         g.drawImage(bushImage, x, y, null); 
+    }
+    public void drawChurch(Graphics g){
+        ImageIcon church = new ImageIcon("churchFullImage.png"); 
+        churchImage = church.getImage(); 
+        g.drawImage(churchImage, x, y, null); 
 
     }
 
