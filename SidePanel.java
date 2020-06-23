@@ -15,18 +15,21 @@ public class SidePanel extends JPanel{
     //private TreePanel panel; 
 
     JButton treeButton = new JButton("Tree");
-    JButton bushButton = new JButton("Bush");
-
     private  ImageIcon treeImage; 
     private  JLabel treeLabel; 
     JPanel treePanel = new JPanel();
 
-
+    JButton bushButton = new JButton("Bush");
     private  ImageIcon bushImage; 
     private  JLabel bushLabel; 
     JPanel bushPanel = new JPanel(); 
 
-    static String select; 
+
+    JButton churchButton = new JButton("Church"); 
+    private ImageIcon churchSmallImage; 
+    private JLabel churchSmallLabel; 
+    JPanel churchPanel = new JPanel(); 
+
 
     public SidePanel(){
         setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS)); 
@@ -34,7 +37,7 @@ public class SidePanel extends JPanel{
 
 
         //////////////////////////////// tree image 
-        treeImage = new ImageIcon(getClass().getResource("treeImage.png")); 
+        treeImage = new ImageIcon(getClass().getResource("treeIMG.png")); 
         treeLabel = new JLabel(treeImage); 
 
         treePanel.setLayout(new FlowLayout()); 
@@ -53,6 +56,18 @@ public class SidePanel extends JPanel{
         bushPanel.add(bushLabel); 
         add(bushPanel); 
 
+        //////////////////////////////// church image
+
+        churchSmallImage = new ImageIcon(getClass().getResource("churchSmallImage.png")); 
+        churchSmallLabel = new JLabel(churchSmallImage); 
+
+        //churchFullImage = new ImageIcon(getClass().getResource("churchFullImage.png")); 
+
+        churchPanel.setLayout(new FlowLayout()); 
+        churchPanel.add(churchButton); 
+        churchPanel.add(churchSmallLabel); 
+        add(churchPanel); 
+
         actionListener(); 
 
     }
@@ -61,16 +76,21 @@ public class SidePanel extends JPanel{
         treeButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 TreePanel.setSelect("Tree");
-
             }
         }); 
 
         bushButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 TreePanel.setSelect("Bush"); 
-
             }
         });
+
+        churchButton.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                TreePanel.setSelect("Church");
+            }
+        });
+
     }    
 
 }
