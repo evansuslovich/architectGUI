@@ -9,7 +9,7 @@ public class TreePanel extends JPanel{
 
     private List<TreeIcon> trees = new LinkedList<TreeIcon>(); 
     private List<TreeIcon> bushes = new LinkedList<TreeIcon>(); 
-    private List<TreeIcon> churches = new LinkedList<TreeIcon>(); 
+    private List<TreeIcon> houses = new LinkedList<TreeIcon>(); 
 
 
     private static String select; 
@@ -32,9 +32,9 @@ public class TreePanel extends JPanel{
             this.repaint();
         }
     }
-    public void addChurch(TreeIcon church){
-        if(select.equals("Church")){
-            churches.add(church);
+    public void addHouse(TreeIcon house){
+        if(select.equals("House")){
+            houses.add(house);
             this.repaint();
         }
     }
@@ -46,8 +46,8 @@ public class TreePanel extends JPanel{
         for(TreeIcon b : bushes){
             b.drawBush(g);
         }
-        for(TreeIcon c : churches){
-            c.drawChurch(g);
+        for(TreeIcon h : houses){
+            h.drawHouse(g);
         }
     }
     

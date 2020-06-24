@@ -25,10 +25,10 @@ public class SidePanel extends JPanel{
     JPanel bushPanel = new JPanel(); 
 
 
-    JButton churchButton = new JButton("Church"); 
-    private ImageIcon churchSmallImage; 
-    private JLabel churchSmallLabel; 
-    JPanel churchPanel = new JPanel(); 
+    JButton houseButton = new JButton("House"); 
+    private ImageIcon houseSmallImage; 
+    private JLabel houseLabel; 
+    JPanel housePanel = new JPanel(); 
 
 
     public SidePanel(){
@@ -58,15 +58,15 @@ public class SidePanel extends JPanel{
 
         //////////////////////////////// church image
 
-        churchSmallImage = new ImageIcon(getClass().getResource("churchSmallImage.png")); 
-        churchSmallLabel = new JLabel(churchSmallImage); 
+        houseSmallImage = new ImageIcon(getClass().getResource("houseIcon.png")); 
+        houseLabel = new JLabel(houseSmallImage); 
 
         //churchFullImage = new ImageIcon(getClass().getResource("churchFullImage.png")); 
 
-        churchPanel.setLayout(new FlowLayout()); 
-        churchPanel.add(churchButton); 
-        churchPanel.add(churchSmallLabel); 
-        add(churchPanel); 
+        housePanel.setLayout(new FlowLayout()); 
+        housePanel.add(houseButton); 
+        housePanel.add(houseLabel); 
+        add(housePanel); 
 
         actionListener(); 
 
@@ -85,9 +85,9 @@ public class SidePanel extends JPanel{
             }
         });
 
-        churchButton.addActionListener(new ActionListener(){
+        houseButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                TreePanel.setSelect("Church");
+                TreePanel.setSelect("House");
             }
         });
 
