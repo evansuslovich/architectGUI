@@ -12,7 +12,8 @@ public class redo extends JFrame implements ActionListener{
 
 
     JPanel panel = new JPanel(); 
-    JButton button = new JButton("Click Me"); 
+    JButton addNumButton = new JButton("Add Number");
+    JButton removeNumButton = new JButton("Remove Number"); 
     JLabel label = new JLabel("Clicks: 0");
     private int counter = 0; 
 
@@ -20,31 +21,50 @@ public class redo extends JFrame implements ActionListener{
     public redo(){
         setSize(400,400); 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-
         panel.setBackground(Color.ORANGE); 
         panel.setLayout(new FlowLayout()); 
-        button.addActionListener(this);
-        panel.add(button);
+
+
+        addNumButton.addActionListener(this);
+        removeNumButton.addActionListener(this); 
+
+
+        panel.add(addNumButton);
         panel.add(label); 
+        panel.add(removeNumButton); 
+
 
         add(panel); 
-
-
         setVisible(true); 
     }
 
     public void actionPerformed(ActionEvent e){
-        if(e.getSource() == button){
+        if(e.getSource() == addNumButton){
             counter++; 
-            label.setText("Clicks: " + integers());
+            label.setText("Clicks: " + addNum());
+            printIntegers(); 
+
+        }
+        if(e.getSource() == removeNumButton){
+            counter--; 
+            label.setText("Clicks: " + removeNum()); 
             printIntegers(); 
 
         }
     }
-
-    public int integers(){
+    public int addNum(){
         integers.add(counter); 
         return integers.size(); 
+    }
+
+    public int removeNum(){
+        if(counter >= 0){
+            integers.remove(integers.size() - 1);
+
+            return integers.size(); 
+        }
+        return integers.size(); 
+
     }
 
     public void printIntegers(){
@@ -54,6 +74,8 @@ public class redo extends JFrame implements ActionListener{
         }
         System.out.println(); 
     }
+
+
     public static void main(String[] args){
         new redo(); 
     }
