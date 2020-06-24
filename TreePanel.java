@@ -11,6 +11,8 @@ public class TreePanel extends JPanel{
     private List<TreeIcon> bushes = new LinkedList<TreeIcon>(); 
     private List<TreeIcon> houses = new LinkedList<TreeIcon>(); 
 
+    private List<TreeIcon> totalImages = new LinkedList<TreeIcon>(); 
+
 
     private static String select; 
     
@@ -22,6 +24,7 @@ public class TreePanel extends JPanel{
     public void addTree(TreeIcon tree){
         if(select.equals("Tree")){
             trees.add(tree); 
+            totalImages.add(tree); 
             this.repaint(); 
         }
         
@@ -29,12 +32,14 @@ public class TreePanel extends JPanel{
     public void addBush(TreeIcon bush){
         if(select.equals("Bush")){
             bushes.add(bush);
+            totalImages.add(bush); 
             this.repaint();
         }
     }
     public void addHouse(TreeIcon house){
         if(select.equals("House")){
             houses.add(house);
+            totalImages.add(house); 
             this.repaint();
         }
     }
