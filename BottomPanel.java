@@ -11,7 +11,7 @@ public class BottomPanel extends JPanel{
         setBackground(new Color(123,123,123)); 
         setLayout(new FlowLayout()); 
 
-        add(redoButton); 
+        add(redoButton);
         actionListener(); 
 
     }
