@@ -20,6 +20,7 @@ public class TreePanel extends JPanel{
 
     private static String select; 
     private static TreeIcon lastTreeIcon; 
+    private static Graphics g; 
     
 
 
@@ -53,8 +54,10 @@ public class TreePanel extends JPanel{
     }
 
     public static void redo(){
-        lastTreeIcon = totalImages.get(totalImages.size()-1); 
-        System.out.println("TreePanel :  X-Coordinate: " + lastTreeIcon.getX() + " Y-Coordinate " + lastTreeIcon.getY());         
+        lastTreeIcon = totalImages.get(totalImages.size()-1);
+        int x = lastTreeIcon.getX(); 
+        int y = lastTreeIcon.getY(); 
+        lastTreeIcon.removeImage(g, x, y);
     }
     
      

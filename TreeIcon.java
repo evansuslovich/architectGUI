@@ -8,6 +8,8 @@ public class TreeIcon {
     Image bushImage;
     Image houseImage;
 
+    Image houseIMG; 
+
     private static ImageIcon lastImage; 
     private static JLabel lastImageIcon; 
 
@@ -33,7 +35,6 @@ public class TreeIcon {
         setLastImage(tree); 
         setLastImage();
 
-        System.out.println("X-Coordinate: " + getX() + " Y-Coordinate " + getY()); 
         g.drawImage(treeImage, x, y, null);
     }
     public void drawBush(Graphics g){
@@ -43,7 +44,6 @@ public class TreeIcon {
         setLastImage(bush); 
         setLastImage();
 
-        System.out.println("X-Coordinate: " + getX() + " Y-Coordinate " + getY()); 
         g.drawImage(bushImage, x, y, null); 
     }
     public void drawHouse(Graphics g){
@@ -52,8 +52,14 @@ public class TreeIcon {
         setLastImage(house); 
         setLastImage();
 
-        System.out.println("X-Coordinate: " + getX() + " Y-Coordinate " + getY()); 
         g.drawImage(houseImage, x, y, null);
+    }
+
+    public void removeImage(Graphics g, int x, int y){
+
+        ImageIcon houseTransparent = new ImageIcon("tran.png"); 
+        houseIMG = houseTransparent.getImage(); 
+        g.drawImage(houseIMG, x, y, null); 
     }
 
 
