@@ -4,7 +4,6 @@ import java.awt.event.*;
 
 public class BottomPanel extends JPanel{
     private static final long serialVersionUID = 1L;
-    
     static JLabel lastImageIcon; 
 
     JButton redoButton = new JButton("Redo");
