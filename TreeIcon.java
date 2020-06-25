@@ -9,6 +9,7 @@ public class TreeIcon {
     Image houseImage;
 
     private static ImageIcon lastImage; 
+    private static JLabel lastImageIcon; 
 
     private int x; 
     private int y;     
@@ -51,6 +52,8 @@ public class TreeIcon {
 
         g.drawImage(houseImage, x, y, null);
     }
+
+
     public void setLastImage(ImageIcon last)
     {
         lastImage = last; 
@@ -74,7 +77,8 @@ public class TreeIcon {
 
     public static void setLastImage()
     {
-        BottomPanel.lastImageIcon = new JLabel(getLastImage()); 
+        lastImageIcon = new JLabel(getLastImage()); 
+        BottomPanel.setLastImageIcon(lastImageIcon); 
     }
 
 
