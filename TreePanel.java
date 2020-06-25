@@ -54,9 +54,7 @@ public class TreePanel extends JPanel{
 
     public static void redo(){
         lastTreeIcon = totalImages.get(totalImages.size()-1); 
-        System.out.println(lastTreeIcon.getX()); 
-        System.out.println(lastTreeIcon.getY()); 
-        
+        System.out.println("TreePanel :  X-Coordinate: " + lastTreeIcon.getX() + " Y-Coordinate " + lastTreeIcon.getY());         
     }
     
      

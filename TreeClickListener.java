@@ -16,6 +16,7 @@ public class TreeClickListener extends MouseAdapter{
         panel.addTree(new TreeIcon(e.getX() - 6, e.getY() - 6));
         panel.addBush(new TreeIcon(e.getX() - 16, e.getY() - 16));   
         panel.addHouse(new TreeIcon(e.getX() - 46, e.getY() - 46));
+
     }
 
    

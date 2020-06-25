@@ -33,6 +33,7 @@ public class TreeIcon {
         setLastImage(tree); 
         setLastImage();
 
+        System.out.println("X-Coordinate: " + getX() + " Y-Coordinate " + getY()); 
         g.drawImage(treeImage, x, y, null);
     }
     public void drawBush(Graphics g){
@@ -42,6 +43,7 @@ public class TreeIcon {
         setLastImage(bush); 
         setLastImage();
 
+        System.out.println("X-Coordinate: " + getX() + " Y-Coordinate " + getY()); 
         g.drawImage(bushImage, x, y, null); 
     }
     public void drawHouse(Graphics g){
@@ -50,6 +52,7 @@ public class TreeIcon {
         setLastImage(house); 
         setLastImage();
 
+        System.out.println("X-Coordinate: " + getX() + " Y-Coordinate " + getY()); 
         g.drawImage(houseImage, x, y, null);
     }
 
@@ -59,17 +62,6 @@ public class TreeIcon {
         lastImage = last; 
     }
     
-    
-    /*public static JLabel lastImage(){
-        //int index = totalImages.size()-1;
-    
-        lastImage = TreeIcon.getLastImage(); 
-        lastImageLabel = new JLabel(lastImage); 
-        return lastImageLabel;
-        //lastImageLabel = new JLabel(lastImage);
-        
-    }
-    */ 
 
     public static ImageIcon getLastImage(){
         return lastImage; 
