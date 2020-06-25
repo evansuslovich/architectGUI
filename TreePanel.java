@@ -19,7 +19,7 @@ public class TreePanel extends JPanel{
 
 
     private static String select; 
-    //private static TreeIcon lastImage; 
+    private static TreeIcon lastTreeIcon; 
     
 
 
@@ -52,14 +52,17 @@ public class TreePanel extends JPanel{
         }
     }
 
+    public static void redo(){
+        lastTreeIcon = totalImages.get(totalImages.size()-1); 
+        System.out.println(lastTreeIcon.getX()); 
+        System.out.println(lastTreeIcon.getY()); 
+        
+    }
     
+     
     
 
-    public static void print(){
-        for(int i = 0; i < totalImages.size(); i++){
-             System.out.println(totalImages.size() - 1); 
-        }
-    }
+    
     @Override
     public void paint(Graphics g){
         for(TreeIcon t : trees){
