@@ -28,7 +28,7 @@ public class BottomPanel extends JPanel{
     public void actionListener(){
         redoButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Redo Button"); 
+                TreePanel.redo(); 
             }
         }); 
     }    
